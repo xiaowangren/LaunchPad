@@ -39,7 +39,7 @@
     showHeader="false"
     enableScrolling="false" >
     <TileContainer
-      id="container"
+      id="container"   
       tileDelete="handleTileDelete"
       tiles="{/json}">
       <StandardTile
