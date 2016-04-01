@@ -1,0 +1,60 @@
+<mvc:View controllerName="com.sap.ui5.view.LaunchPad" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:u="sap.ui.unified"
+>
+	<!--<u:Shell icon="" id="myShell">-->
+
+	<!--	     <TileContainer id="tc_menu" tiles="{/JsonData}">-->
+
+				<!--<StandardTile -->
+				<!--	icon="{Icon}" -->
+
+				<!--	title="{Title}" -->
+
+				<!--	info="{Info}"-->
+
+				<!--	infoState="{infoState}"-->
+
+				<!--	number="{Countmenge}"-->
+
+				<!--	numberUnit="{Countmeins}"-->
+
+				<!--	press="handleNavOnSelect">-->
+
+				<!--		<customData>-->
+
+				<!--			<core:CustomData key="targetPage" value="{Tpage}">-->
+
+				<!--			</core:CustomData>-->
+
+				<!--		</customData>-->
+
+				<!--</StandardTile>-->
+
+	<!--	</TileContainer>-->
+
+	<!--</u:Shell>-->
+	<Page
+    showHeader="false"
+    enableScrolling="false" >
+    <TileContainer
+      id="container"
+      tileDelete="handleTileDelete"
+      tiles="{/json}">
+      <StandardTile
+        icon="{Icon}"
+        number="{Countmenge}"
+        numberUnit="{Countmeins}"
+        title="{Title}"
+        info="{Info}"
+        infoState="" 
+        press="handleNavOnSelect">
+      	<customData>
+      		<core:CustomData key="targetPage" value="{Tpage}"></core:CustomData>
+      	</customData>
+      </StandardTile>
+    </TileContainer>
+  </Page>
+	
+</mvc:View>
