@@ -9,10 +9,9 @@ sap.ui.controller("com.sap.ui5.view.LaunchPad", {
 		mParameters['async'] = true;
 		mParameters['success'] = jQuery.proxy(function(sRes) {
 			var json = sRes.results;
-			console.log(json);
 			var oModelJson = new sap.ui.model.json.JSONModel();
-			oModelJson.setData({"json":json});
-			comId.setModel(oModelJson);
+			oModelJson.setData(json);
+			comId.setModel(oModelJson,"jsons");
 		});
 		mParameters['error'] = jQuery.proxy(function(eRes) {
 			sap.m.MessageToast.show("网络未连接");

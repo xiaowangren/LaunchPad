@@ -41,17 +41,16 @@
     <TileContainer
       id="container"   
       tileDelete="handleTileDelete"
-      tiles="{/json}">
+      tiles="{jsons>/}">
       <StandardTile
-        icon="{Icon}"
-        number="{Countmenge}"
-        numberUnit="{Countmeins}"
-        title="{Title}"
-        info="{Info}"
-        infoState="" 
+        icon="{jsons>Icon}"
+        number="{jsons>Countmenge}"
+        numberUnit="{jsons>Countmeins}"
+        title="{jsons>Title}"
+        info="{jsons>Info}"
         press="handleNavOnSelect">
       	<customData>
-      		<core:CustomData key="targetPage" value="{Tpage}"></core:CustomData>
+      		<core:CustomData key="targetPage" value="{jsons>Tpage}"></core:CustomData>
       	</customData>
       </StandardTile>
     </TileContainer>
